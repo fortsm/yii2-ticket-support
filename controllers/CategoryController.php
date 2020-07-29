@@ -1,18 +1,18 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\controllers;
+namespace fortsm\support\controllers;
 
-use akiraz2\support\components\BackendFilter;
-use akiraz2\support\models\Category;
-use akiraz2\support\models\CategorySearch;
-use akiraz2\support\Module;
-use akiraz2\support\traits\ModuleTrait;
+use fortsm\support\components\BackendFilter;
+use fortsm\support\models\Category;
+use fortsm\support\models\CategorySearch;
+use fortsm\support\Module;
+use fortsm\support\traits\ModuleTrait;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -88,7 +88,7 @@ class CategoryController extends Controller
     {
         $model = $this->findModel($id);
 
-        $this->view->title = \akiraz2\support\Module::t('support', 'Category: {NAME}', ['NAME' => $model->title]);
+        $this->view->title = \fortsm\support\Module::t('support', 'Category: {NAME}', ['NAME' => $model->title]);
 
         return $this->render('view', [
             'model' => $model,
@@ -118,7 +118,7 @@ class CategoryController extends Controller
      */
     public function actionCreate()
     {
-        $this->view->title = \akiraz2\support\Module::t('support', 'Add Category');
+        $this->view->title = \fortsm\support\Module::t('support', 'Add Category');
         $model = new Category();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -142,7 +142,7 @@ class CategoryController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $this->view->title = \akiraz2\support\Module::t('support', 'Update: {NAME}', ['NAME' => $model->title]);
+        $this->view->title = \fortsm\support\Module::t('support', 'Update: {NAME}', ['NAME' => $model->title]);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect([

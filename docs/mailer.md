@@ -10,7 +10,7 @@ Mailer can be configured as followed:
 ```php
 ...
 'support' => [
-    'class' => 'akiraz2\support\Module',
+    'class' => 'fortsm\support\Module',
     'mailer' => [
         'sender' => 'support@myhost.com', // or ['support@myhost.com' => 'Technical Support']  
 ],

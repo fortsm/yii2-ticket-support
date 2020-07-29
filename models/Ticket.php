@@ -1,15 +1,15 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\models;
+namespace fortsm\support\models;
 
-use akiraz2\support\Mailer;
-use akiraz2\support\traits\ModuleTrait;
+use fortsm\support\Mailer;
+use fortsm\support\traits\ModuleTrait;
 use Hashids\Hashids;
 use PhpImap\IncomingMail;
 use Yii;
@@ -84,7 +84,7 @@ class Ticket extends TicketBase
         if (!is_null($status) && in_array($status, array_keys($list))) {
             return $list[$status];
         }
-        return \akiraz2\support\Module::t('support', 'Unknown');
+        return \fortsm\support\Module::t('support', 'Unknown');
     }
 
     /**
@@ -95,9 +95,9 @@ class Ticket extends TicketBase
     public static function getStatusOption($e = null)
     {
         $option = [
-            self::STATUS_OPEN => \akiraz2\support\Module::t('support', 'Open'),
-            self::STATUS_WAITING => \akiraz2\support\Module::t('support', 'Waiting'),
-            self::STATUS_CLOSED => \akiraz2\support\Module::t('support', 'Closed'),
+            self::STATUS_OPEN => \fortsm\support\Module::t('support', 'Open'),
+            self::STATUS_WAITING => \fortsm\support\Module::t('support', 'Waiting'),
+            self::STATUS_CLOSED => \fortsm\support\Module::t('support', 'Closed'),
         ];
         if (is_array($e)) {
             foreach ($e as $i) {
@@ -134,16 +134,16 @@ class Ticket extends TicketBase
             return '<span class="label label-' . $color . '">' . $list[$status] . '</span>';
         }
 
-        return '<span class="label label-' . $color . '">' . \akiraz2\support\Module::t('support',
+        return '<span class="label label-' . $color . '">' . \fortsm\support\Module::t('support',
                 'Unknown') . '</span>';
     }
 
     public static function getTypeList()
     {
         return [
-            self::TYPE_SITE => \akiraz2\support\Module::t('support', 'Site'),
-            self::TYPE_EMAIL => \akiraz2\support\Module::t('support', 'Email'),
-            self::TYPE_TELEGRAM => \akiraz2\support\Module::t('support', 'Telegram'),
+            self::TYPE_SITE => \fortsm\support\Module::t('support', 'Site'),
+            self::TYPE_EMAIL => \fortsm\support\Module::t('support', 'Email'),
+            self::TYPE_TELEGRAM => \fortsm\support\Module::t('support', 'Telegram'),
         ];
     }
 
@@ -194,14 +194,14 @@ class Ticket extends TicketBase
     public function attributeLabels()
     {
         return [
-            'id' => \akiraz2\support\Module::t('support', 'ID'),
-            'category_id' => \akiraz2\support\Module::t('support', 'Category'),
-            'title' => \akiraz2\support\Module::t('support', 'Title'),
-            'content' => \akiraz2\support\Module::t('support', 'Content'),
-            'status' => \akiraz2\support\Module::t('support', 'Status'),
-            'user_id' => \akiraz2\support\Module::t('support', 'Created By'),
-            'created_at' => \akiraz2\support\Module::t('support', 'Created At'),
-            'updated_at' => \akiraz2\support\Module::t('support', 'Updated At'),
+            'id' => \fortsm\support\Module::t('support', 'ID'),
+            'category_id' => \fortsm\support\Module::t('support', 'Category'),
+            'title' => \fortsm\support\Module::t('support', 'Title'),
+            'content' => \fortsm\support\Module::t('support', 'Content'),
+            'status' => \fortsm\support\Module::t('support', 'Status'),
+            'user_id' => \fortsm\support\Module::t('support', 'Created By'),
+            'created_at' => \fortsm\support\Module::t('support', 'Created At'),
+            'updated_at' => \fortsm\support\Module::t('support', 'Updated At'),
         ];
     }
 
@@ -319,7 +319,7 @@ class Ticket extends TicketBase
             $post = new Content();
             $post->id_ticket = $this->id;
             $post->user_id = null;
-            $post->content = \akiraz2\support\Module::t('support',/**/
+            $post->content = \fortsm\support\Module::t('support',/**/
                 'Ticket was closed automatically due to inactivity.');
             if ($post->save()) {
                 $this->status = Ticket::STATUS_CLOSED;

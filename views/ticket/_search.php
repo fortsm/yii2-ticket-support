@@ -1,8 +1,8 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
@@ -10,7 +10,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model akiraz2\support\models\TicketSearch */
+/* @var $model fortsm\support\models\TicketSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -36,8 +36,8 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'updated_at') ?>
 
     <div class="form-group">
-        <?= Html::submitButton(\akiraz2\support\Module::t('support', 'Search'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton(\akiraz2\support\Module::t('support', 'Reset'), ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton(\fortsm\support\Module::t('support', 'Search'), ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton(\fortsm\support\Module::t('support', 'Reset'), ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

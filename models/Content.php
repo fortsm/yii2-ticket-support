@@ -1,16 +1,16 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\models;
+namespace fortsm\support\models;
 
-use akiraz2\support\jobs\SendMailJob;
-use akiraz2\support\Mailer;
-use akiraz2\support\traits\ModuleTrait;
+use fortsm\support\jobs\SendMailJob;
+use fortsm\support\Mailer;
+use fortsm\support\traits\ModuleTrait;
 use Yii;
 
 /**
@@ -62,7 +62,7 @@ class Content extends ContentBase
         if (!empty($status) && in_array($status, array_keys($list))) {
             return $list[$status];
         }
-        return \akiraz2\support\Module::t('support', 'Unknown');
+        return \fortsm\support\Module::t('support', 'Unknown');
     }
 
     /**
@@ -73,8 +73,8 @@ class Content extends ContentBase
     public static function getStatusOption($e = null)
     {
         $option = [
-            self::STATUS_ACTIVE => \akiraz2\support\Module::t('support', 'Active'),
-            self::STATUS_INACTIVE => \akiraz2\support\Module::t('support', 'Inactive'),
+            self::STATUS_ACTIVE => \fortsm\support\Module::t('support', 'Active'),
+            self::STATUS_INACTIVE => \fortsm\support\Module::t('support', 'Inactive'),
         ];
         if (is_array($e)) {
             foreach ($e as $i) {
@@ -122,12 +122,12 @@ class Content extends ContentBase
     public function attributeLabels()
     {
         return [
-            'id' => \akiraz2\support\Module::t('support', 'ID'),
-            'id_ticket' => \akiraz2\support\Module::t('support', 'Id Ticket'),
-            'content' => \akiraz2\support\Module::t('support', 'Content'),
-            'user_id' => \akiraz2\support\Module::t('support', 'Created By'),
-            'created_at' => \akiraz2\support\Module::t('support', 'Created At'),
-            'updated_at' => \akiraz2\support\Module::t('support', 'Updated At'),
+            'id' => \fortsm\support\Module::t('support', 'ID'),
+            'id_ticket' => \fortsm\support\Module::t('support', 'Id Ticket'),
+            'content' => \fortsm\support\Module::t('support', 'Content'),
+            'user_id' => \fortsm\support\Module::t('support', 'Created By'),
+            'created_at' => \fortsm\support\Module::t('support', 'Created At'),
+            'updated_at' => \fortsm\support\Module::t('support', 'Updated At'),
         ];
     }
 

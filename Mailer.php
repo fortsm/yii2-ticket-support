@@ -1,12 +1,12 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support;
+namespace fortsm\support;
 
 use PhpImap\Mailbox;
 use Yii;
@@ -18,7 +18,7 @@ use yii\base\Component;
 class Mailer extends Component
 {
     /** @var string */
-    public $viewPath = '@vendor/akiraz2/yii2-ticket-support/mail';
+    public $viewPath = '@vendor/fortsm/yii2-ticket-support/mail';
 
     /** @var string|array Default: `Yii::$app->params['adminEmail']` OR `no-reply@example.com` */
     public $sender;
@@ -29,7 +29,7 @@ class Mailer extends Component
     /** @var \yii\mail\BaseMailer Default: `Yii::$app->mailer` */
     public $mailerComponent;
 
-    /** @var \akiraz2\support\Module */
+    /** @var \fortsm\support\Module */
     protected $module;
 
     protected $_mailer;

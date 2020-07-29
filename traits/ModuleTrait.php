@@ -1,14 +1,14 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\traits;
+namespace fortsm\support\traits;
 
-use akiraz2\support\Module;
+use fortsm\support\Module;
 
 trait ModuleTrait
 {

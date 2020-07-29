@@ -1,18 +1,18 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\controllers;
+namespace fortsm\support\controllers;
 
-use akiraz2\support\components\BackendFilter;
-use akiraz2\support\models\Content;
-use akiraz2\support\models\Ticket;
-use akiraz2\support\models\TicketSearch;
-use akiraz2\support\traits\ModuleTrait;
+use fortsm\support\components\BackendFilter;
+use fortsm\support\models\Content;
+use fortsm\support\models\Ticket;
+use fortsm\support\models\TicketSearch;
+use fortsm\support\traits\ModuleTrait;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -74,7 +74,7 @@ class TicketController extends Controller
      */
     public function actionIndex()
     {
-        $this->view->title = \akiraz2\support\Module::t('support', 'My Tickets');
+        $this->view->title = \fortsm\support\Module::t('support', 'My Tickets');
         $searchModel = new TicketSearch(['userSearch' => true]);
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -91,7 +91,7 @@ class TicketController extends Controller
      */
     public function actionManage()
     {
-        $this->view->title = \akiraz2\support\Module::t('support', 'Tickets');
+        $this->view->title = \fortsm\support\Module::t('support', 'Tickets');
         $searchModel = new TicketSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -159,7 +159,7 @@ class TicketController extends Controller
      */
     public function actionCreate()
     {
-        $this->view->title = \akiraz2\support\Module::t('support', 'Open Ticket');
+        $this->view->title = \fortsm\support\Module::t('support', 'Open Ticket');
         $model = new Ticket();
         $model->setScenario('create');
 
@@ -189,7 +189,7 @@ class TicketController extends Controller
             $post->user_id = Yii::$app->user->id;
             $module = $this->getModule();
             $userModel = $module->userModel::findOne([$module->userPK => Yii::$app->user->id]);
-            $post->content = \akiraz2\support\Module::t('support', '{USER} closed the ticket.',
+            $post->content = \fortsm\support\Module::t('support', '{USER} closed the ticket.',
                 ['USER' => $userModel->{$module->userName}]);
             if ($post->save()) {
                 $model->status = Ticket::STATUS_CLOSED;

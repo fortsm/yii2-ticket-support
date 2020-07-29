@@ -1,23 +1,23 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-use akiraz2\support\models\Ticket;
+use fortsm\support\models\Ticket;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 
 /* @var $this yii\web\View */
-/* @var $model akiraz2\support\models\Ticket */
-/* @var $reply akiraz2\support\models\Content */
+/* @var $model fortsm\support\models\Ticket */
+/* @var $reply fortsm\support\models\Content */
 
-\akiraz2\support\assets\TicketAsset::register($this);
+\fortsm\support\assets\TicketAsset::register($this);
 
-$this->params['breadcrumbs'][] = ['label' => \akiraz2\support\Module::t('support', 'Tickets'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => \fortsm\support\Module::t('support', 'Tickets'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </h2>
 
             <div class="pull-right">
-                <?= \akiraz2\support\Module::t('support', 'Status: {STATUS}',
+                <?= \fortsm\support\Module::t('support', 'Status: {STATUS}',
                     ['STATUS' => $model->getStatusColorText()]) ?>
             </div>
 
@@ -73,11 +73,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
                 ?>
                 <div class="form-group">
-                    <?= \yii\helpers\Html::submitButton(\akiraz2\support\Module::t('support', 'Reply'),
+                    <?= \yii\helpers\Html::submitButton(\fortsm\support\Module::t('support', 'Reply'),
                         ['class' => 'btn btn-primary']) ?>
 
                     <?php if ($model->status != Ticket::STATUS_CLOSED): ?>
-                        <?= Html::a(\akiraz2\support\Module::t('support', 'Close'), [
+                        <?= Html::a(\fortsm\support\Module::t('support', 'Close'), [
                             'close',
                             'id' => $model->hash_id
                         ], ['class' => 'btn btn-warning']) ?>

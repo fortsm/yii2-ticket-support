@@ -1,14 +1,14 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support;
+namespace fortsm\support;
 
-use akiraz2\support\traits\ModuleTrait;
+use fortsm\support\traits\ModuleTrait;
 use yii\base\BootstrapInterface;
 use yii\console\Application as ConsoleApplication;
 use yii\i18n\PhpMessageSource;
@@ -27,7 +27,7 @@ class Bootstrap implements BootstrapInterface
     {
         if ($app->hasModule('support') && ($module = $app->getModule('support')) instanceof Module) {
 
-            \Yii::$container->set('akiraz2\support\Mailer', $module->mailer);
+            \Yii::$container->set('fortsm\support\Mailer', $module->mailer);
 
             $redactorModule = $this->getModule()->redactorModule;
             if ($this->getModule()->getIsBackend() && !$app->hasModule($redactorModule)) {
@@ -41,7 +41,7 @@ class Bootstrap implements BootstrapInterface
             }
 
             if ($app instanceof ConsoleApplication) {
-                $this->getModule()->controllerNamespace = 'akiraz2\support\commands';
+                $this->getModule()->controllerNamespace = 'fortsm\support\commands';
             }
 
             $app->urlManager->addRules(
@@ -68,13 +68,13 @@ class Bootstrap implements BootstrapInterface
         }
 
         // Add module I18N category.
-        if (!isset($app->i18n->translations['akiraz2/support'])) {
-            $app->i18n->translations['akiraz2/support'] = [
+        if (!isset($app->i18n->translations['fortsm/support'])) {
+            $app->i18n->translations['fortsm/support'] = [
                 'class' => PhpMessageSource::class,
                 'basePath' => __DIR__ . '/messages',
                 'forceTranslation' => true,
                 'fileMap' => [
-                    'akiraz2/support' => 'support.php',
+                    'fortsm/support' => 'support.php',
                 ]
             ];
         }

@@ -1,18 +1,18 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\migrations;
+namespace fortsm\support\migrations;
 
 use yii\db\Migration;
 
 class m180925_080718_init extends Migration
 {
-    use \akiraz2\support\traits\ModuleTrait;
+    use \fortsm\support\traits\ModuleTrait;
 
     /**
      * @inheritdoc

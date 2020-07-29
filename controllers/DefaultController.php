@@ -1,17 +1,17 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\controllers;
+namespace fortsm\support\controllers;
 
-use akiraz2\support\components\BackendFilter;
-use akiraz2\support\jobs\FetchMailJob;
-use akiraz2\support\models\Ticket;
-use akiraz2\support\traits\ModuleTrait;
+use fortsm\support\components\BackendFilter;
+use fortsm\support\jobs\FetchMailJob;
+use fortsm\support\models\Ticket;
+use fortsm\support\traits\ModuleTrait;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 
@@ -66,7 +66,7 @@ class DefaultController extends Controller
     {
         $id = \Yii::$app->get($this->getModule()->queueComponent)->push(new FetchMailJob());
         if ($id) {
-            \Yii::$app->session->setFlash('success', \akiraz2\support\Module::t('support', 'Added job to fetch tickets from mailbox, please wait'));
+            \Yii::$app->session->setFlash('success', \fortsm\support\Module::t('support', 'Added job to fetch tickets from mailbox, please wait'));
         }
         return $this->redirect(['/support/ticket/manage']);
     }

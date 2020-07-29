@@ -10,7 +10,7 @@ Yii2-ticket-support can be installed using composer. Run following command to do
 install Yii2-ticket-support:
 
 ```bash
-composer require akiraz2/Yii2-ticket-support "dev-master"
+composer require fortsm/Yii2-ticket-support "dev-master"
 ```
 
 ### 2. Configure
@@ -20,7 +20,7 @@ Add following lines to your main configuration file:
 ```php
 'modules' => [
     'support' => [
-        'class' => 'akiraz2\support\Module',
+        'class' => 'fortsm\support\Module',
         'userModel' => 'common\models\User',
         'yii2basictemplate' => false,
         'adminMatchCallback' => false,//false - for frontend, true - for backend
@@ -47,7 +47,7 @@ return [
             'migrationPath' => null,
             'migrationNamespaces' => [
                 //'console\migrations',                
-                'akiraz2\support\migrations'
+                'fortsm\support\migrations'
             ],
         ],
     ],

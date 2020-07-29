@@ -1,19 +1,19 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
 
-namespace akiraz2\support\models;
+namespace fortsm\support\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * CategorySearch represents the model behind the search form about `akiraz2\ticket\models\Category`.
+ * CategorySearch represents the model behind the search form about `fortsm\ticket\models\Category`.
  */
 class CategorySearch extends Category
 {

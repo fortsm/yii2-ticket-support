@@ -1,18 +1,18 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-use akiraz2\support\models\Category;
+use fortsm\support\models\Category;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
-/* @var $searchModel akiraz2\support\models\CategorySearch */
+/* @var $searchModel fortsm\support\models\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 
@@ -64,7 +64,7 @@ $this->registerJs('$(document).on("pjax:send", function(){ $(".grid-view-overlay
             </div>
             <?php Pjax::end(); ?>
             <p>
-                <?= Html::a(\akiraz2\support\Module::t('support', 'Add Category'), ['create'],
+                <?= Html::a(\fortsm\support\Module::t('support', 'Add Category'), ['create'],
                     ['class' => 'btn btn-success']) ?>
             </p>
 

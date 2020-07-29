@@ -1,20 +1,20 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model \akiraz2\support\models\Ticket */
+/* @var $model \fortsm\support\models\Ticket */
 ?>
 
-<?= \akiraz2\support\Module::t('support', 'Hello Admin,') ?>
+<?= \fortsm\support\Module::t('support', 'Hello Admin,') ?>
 
-<?= \akiraz2\support\Module::t('support', '{USER} ({EMAIL}) have opened a ticket with the following message:', [
+<?= \fortsm\support\Module::t('support', '{USER} ({EMAIL}) have opened a ticket with the following message:', [
     'USER' => Html::encode($model->user->{\Yii::$app->getModule('support')->userName}),
     'EMAIL' => Html::encode($model->user->{\Yii::$app->getModule('support')->userEmail})
 ]) ?>

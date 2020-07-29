@@ -1,23 +1,23 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-use akiraz2\support\models\Category;
-use akiraz2\support\models\Ticket;
+use fortsm\support\models\Category;
+use fortsm\support\models\Ticket;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\jui\DatePicker;
 use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
-/* @var $searchModel akiraz2\support\models\TicketSearch */
+/* @var $searchModel fortsm\support\models\TicketSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-\akiraz2\support\assets\TicketAsset::register($this);
+\fortsm\support\assets\TicketAsset::register($this);
 
 /* breadcrumbs */
 $this->params['breadcrumbs'][] = $this->title;
@@ -30,7 +30,7 @@ $this->registerJs('$(document).on("pjax:send", function(){ $(".grid-view-overlay
     <div class="box box-primary">
         <div class="box-body">
             <p>
-                <?= Html::a(\akiraz2\support\Module::t('support', 'Open Ticket'), ['create'],
+                <?= Html::a(\fortsm\support\Module::t('support', 'Open Ticket'), ['create'],
                     ['class' => 'btn btn-success']) ?>
             </p>
             <?php Pjax::begin(); ?>

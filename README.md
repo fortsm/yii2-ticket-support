@@ -1,4 +1,4 @@
-# Yii2 Support [![Packagist Version](https://img.shields.io/packagist/v/akiraz2/yii2-ticket-support.svg?style=flat-square)](https://packagist.org/packages/akiraz2/yii2-ticket-support) [![Total Downloads](https://img.shields.io/packagist/dt/akiraz2/yii2-ticket-support.svg?style=flat-square)](https://packagist.org/packages/akiraz2/yii2-ticket-support) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+# Yii2 Support [![Packagist Version](https://img.shields.io/packagist/v/fortsm/yii2-ticket-support.svg?style=flat-square)](https://packagist.org/packages/fortsm/yii2-ticket-support) [![Total Downloads](https://img.shields.io/packagist/dt/fortsm/yii2-ticket-support.svg?style=flat-square)](https://packagist.org/packages/fortsm/yii2-ticket-support) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 Yii2 Support Ticket System - simple, flexible module for Yii2 advanced template (frontend/backend apps)
 

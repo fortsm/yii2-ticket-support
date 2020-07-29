@@ -10,7 +10,7 @@ configure your view application component as follows:
     'view' => [
         'theme' => [
             'pathMap' => [
-                '@akiraz2/support/views' => '@app/views/support'
+                '@fortsm/support/views' => '@app/views/support'
             ],
         ],
     ],
@@ -18,7 +18,7 @@ configure your view application component as follows:
 ...
 ```
 
-In the above `pathMap` means that every view in @akiraz2/support/views will be first searched under `@app/views/support` and
+In the above `pathMap` means that every view in @fortsm/support/views will be first searched under `@app/views/support` and
 if a view exists in the theme directory it will be used instead of the original view.
 
 ## How to change controller's layout?
@@ -28,10 +28,10 @@ You can change controller's layout using `controllerMap` module's property:
 ```php
         'modules' => [
             'support' => [
-                'class' => 'akiraz2\support\Module',
+                'class' => 'fortsm\support\Module',
                 'controllerMap' => [
                     'ticket' => [
-                        'class'  => 'akiraz2\support\controllers\TicketController',
+                        'class'  => 'fortsm\support\controllers\TicketController',
                         'layout' => '//cabinet',//@frontend/views/layouts/cabinet
                     ],
                 ],

@@ -1,21 +1,21 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
 /* @var $this yii\web\View */
-/* @var $model akiraz2\support\models\Category */
+/* @var $model fortsm\support\models\Category */
 
 
 $this->params['breadcrumbs'][] = [
-    'label' => \akiraz2\support\Module::t('support', 'Categories'),
+    'label' => \fortsm\support\Module::t('support', 'Categories'),
     'url' => ['index']
 ];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = \akiraz2\support\Module::t('support', 'Update');
+$this->params['breadcrumbs'][] = \fortsm\support\Module::t('support', 'Update');
 
 /* misc */
 //$js=file_get_contents(__DIR__.'/index.min.js');

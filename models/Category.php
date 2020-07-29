@@ -1,15 +1,15 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\models;
+namespace fortsm\support\models;
 
-use akiraz2\support\Module;
-use akiraz2\support\traits\ModuleTrait;
+use fortsm\support\Module;
+use fortsm\support\traits\ModuleTrait;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -69,7 +69,7 @@ class Category extends CategoryBase
         if (!is_null($status) && in_array($status, array_keys($list))) {
             return $list[$status];
         }
-        return \akiraz2\support\Module::t('support', 'Unknown');
+        return \fortsm\support\Module::t('support', 'Unknown');
     }
 
     /**

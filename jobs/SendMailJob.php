@@ -1,16 +1,16 @@
 <?php
 /**
  * @author akiraz@bk.ru
- * @link https://github.com/akiraz2/yii2-ticket-support
- * @copyright 2018 akiraz2
+ * @link https://github.com/fortsm/yii2-ticket-support
+ * @copyright 2018 fortsm
  * @license MIT
  */
 
-namespace akiraz2\support\jobs;
+namespace fortsm\support\jobs;
 
-use akiraz2\support\Mailer;
-use akiraz2\support\models\Content;
-use akiraz2\support\traits\ModuleTrait;
+use fortsm\support\Mailer;
+use fortsm\support\models\Content;
+use fortsm\support\traits\ModuleTrait;
 use yii\base\BaseObject;
 
 class SendMailJob extends BaseObject implements \yii\queue\JobInterface
@@ -25,7 +25,7 @@ class SendMailJob extends BaseObject implements \yii\queue\JobInterface
         if ($content !== null) {
             $email = $content->ticket->user_contact;
             /* send email */
-            $subject = \akiraz2\support\Module::t('support', '[{APP} Ticket #{ID}] Re: {TITLE}',
+            $subject = \fortsm\support\Module::t('support', '[{APP} Ticket #{ID}] Re: {TITLE}',
                 ['APP' => \Yii::$app->name, 'ID' => $content->ticket->hash_id, 'TITLE' => $content->ticket->title]);
 
             $this->mailer->sendMessage(
